@@ -7,23 +7,20 @@ import Rank from './components/Rank/Rank'
 import './App.css';
 const ParticleOptions = {
   particles: {
-    number: {
-      value: 80,
-      density: {
+    line_linked: {
+      shadow: {
         enable: true,
-        value_area: 800,
-      },
+        color: "#3CA9D1",
+        blur: 5
+      }
     }
-  },
-  interactivity{
-
   }
 };
 
 function App() {
   return (
     <div className="App">
-      <Particles className="particles" params={ParticleOptions} />
+      <Particles params={ParticleOptions} />
       <Navigation />
       <Logo />
       <Rank />

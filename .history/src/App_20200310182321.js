@@ -14,9 +14,9 @@ const ParticleOptions = {
         value_area: 800,
       },
     }
-  },
+  }
   interactivity{
-
+    
   }
 };
 

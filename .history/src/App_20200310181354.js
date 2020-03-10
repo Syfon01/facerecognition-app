@@ -7,16 +7,18 @@ import Rank from './components/Rank/Rank'
 import './App.css';
 const ParticleOptions = {
   particles: {
-    number: {
-      value: 80,
+    line_linked: {
+      value: 30,
       density: {
         enable: true,
-        value_area: 800,
+        value_area: 800
       },
+      shadow: {
+        enable: true,
+        color: "#3CA9D1",
+        blur: 5
+      }
     }
-  },
-  interactivity{
-
   }
 };
 
