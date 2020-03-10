@@ -8,7 +8,7 @@ import './App.css';
 const ParticleOptions = {
   particles: {
     number: {
-      value: 100,
+      value: 80,
       density: {
         enable: true,
         value_area: 800,
@@ -19,8 +19,8 @@ const ParticleOptions = {
     detect_on: "canvas",
     events: {
       onhover: {
-        enable: true,
-        mode: "bubble"
+        "enable": true,
+        "mode": "bubble"
       },
     }
   }
