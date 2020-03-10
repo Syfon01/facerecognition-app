@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Navigation />
       <Logo />
-      <ImageLink/>
+      <ImageLink/
     </div>
   );
 }
