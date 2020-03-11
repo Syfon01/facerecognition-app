@@ -3,8 +3,8 @@ import React from 'react';
 function FaceDisplay({imageUrl}) {
   return (
     <div className='center ma'>
-      <div className="absolute mt-5">
-        <img alt ="face" src={imageUrl} width="200px" height="auto"/>
+      <div className="absolute mt-3">
+        <img alt ="face" src={imageUrl} width="500px" height="auto"/>
       </div>
     </div>
   )

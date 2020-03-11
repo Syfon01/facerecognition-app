@@ -50,7 +50,7 @@ function App() {
       Clarifai.FACE_DETECT_MODEL,
       input)
       .then( function (response) {
-       console.log(response.outputs[0].data.regions[0].region_info.bounding_box)
+       console.log(response.outputs.data[0].data.regions[0].region_info.)
       },
       function (err) {
         // there was an error
