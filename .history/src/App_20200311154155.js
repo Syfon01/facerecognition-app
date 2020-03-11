@@ -55,9 +55,7 @@ function App() {
         <Logo />
         <Rank />
       <ImageLink onInputChange={onInputChange}
-                onSubmitButton={onSubmitButton}
-      />
-      <FaceDisplay/>
+        onSubmitButton={onSubmitButton} />
       </div>
     );
 }

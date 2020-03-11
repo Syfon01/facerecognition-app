@@ -1,17 +1,10 @@
 import React from 'react';
 import Particles from "react-particles-js";
-import Clarifai from "clarifai";
 import Navigation from './components/Navigation/Navigation.js'
-import FaceDisplay from './components/FaceDisplay/FaceDisplay'
 import Logo from './components/Logo/Logo';
 import ImageLink from './components/ImageLink/ImageLink'
-import Rank from './components/Rank/Rank';
+import Rank from './components/Rank/Rank'
 import './App.css';
-
-const app = new Clarifai.App({
-  apiKey: "113d2c0bbadf44f194392c8d84085a3a"
-});
-
 const ParticleOptions = {
   particles: {
     number: {
@@ -38,15 +31,7 @@ function App() {
     console.log(e.target.value)
   }
   const onSubmitButton = () => {
-    console.log('click')
-    app.models.predict("a403429f2ddf4b49b307e318f00e528b", "https://samples.clarifai.com/face-det.jpg").then(
-      function (response) {
-       console.log(response)
-      },
-      function (err) {
-        // there was an error
-      }
-    );
+
   }
   return (
       <div className="App">
@@ -54,10 +39,7 @@ function App() {
         <Navigation />
         <Logo />
         <Rank />
-      <ImageLink onInputChange={onInputChange}
-                onSubmitButton={onSubmitButton}
-      />
-      <FaceDisplay/>
+      <ImageLink onInputChange={onInputChange}/>
       </div>
     );
 }

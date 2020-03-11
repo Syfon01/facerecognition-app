@@ -2,7 +2,7 @@ import React from 'react';
 import Particles from "react-particles-js";
 import Clarifai from "clarifai";
 import Navigation from './components/Navigation/Navigation.js'
-import FaceDisplay from './components/FaceDisplay/FaceDisplay'
+import FaceDisplay from './components'
 import Logo from './components/Logo/Logo';
 import ImageLink from './components/ImageLink/ImageLink'
 import Rank from './components/Rank/Rank';

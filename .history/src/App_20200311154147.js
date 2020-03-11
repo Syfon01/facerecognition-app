@@ -54,10 +54,7 @@ function App() {
         <Navigation />
         <Logo />
         <Rank />
-      <ImageLink onInputChange={onInputChange}
-                onSubmitButton={onSubmitButton}
-      />
-      <FaceDisplay/>
+      <ImageLink onInputChange={onInputChange} onSubmitButton={onSubmitButton}/>
       </div>
     );
 }

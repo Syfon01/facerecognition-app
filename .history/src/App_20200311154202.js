@@ -57,7 +57,6 @@ function App() {
       <ImageLink onInputChange={onInputChange}
                 onSubmitButton={onSubmitButton}
       />
-      <FaceDisplay/>
       </div>
     );
 }

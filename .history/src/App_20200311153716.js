@@ -2,7 +2,6 @@ import React from 'react';
 import Particles from "react-particles-js";
 import Clarifai from "clarifai";
 import Navigation from './components/Navigation/Navigation.js'
-import FaceDisplay from './components/FaceDisplay/FaceDisplay'
 import Logo from './components/Logo/Logo';
 import ImageLink from './components/ImageLink/ImageLink'
 import Rank from './components/Rank/Rank';
@@ -41,7 +40,7 @@ function App() {
     console.log('click')
     app.models.predict("a403429f2ddf4b49b307e318f00e528b", "https://samples.clarifai.com/face-det.jpg").then(
       function (response) {
-       console.log(response)
+       console.log(respo)
       },
       function (err) {
         // there was an error
@@ -54,10 +53,7 @@ function App() {
         <Navigation />
         <Logo />
         <Rank />
-      <ImageLink onInputChange={onInputChange}
-                onSubmitButton={onSubmitButton}
-      />
-      <FaceDisplay/>
+      <ImageLink onInputChange={onInputChange} onSubmitButton={onSubmitButton}/>
       </div>
     );
 }
