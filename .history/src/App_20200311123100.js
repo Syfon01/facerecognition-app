@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, Component } from 'react';
 import Particles from "react-particles-js";
 import Navigation from './components/Navigation/Navigation.js'
 import Logo from './components/Logo/Logo';
@@ -26,18 +26,24 @@ const ParticleOptions = {
   }
 };
 
-function App() {
-  const onInputChange = (e) => {
-    console.log(e.target.value)
+class  App extends Component {
+  constructor () {
+    super();
+    this.state = {
+      input: ''
+    }
   }
-  return (
+  render {
+    return (
       <div className="App">
         <Particles className="particles" params={ParticleOptions} />
         <Navigation />
         <Logo />
         <Rank />
-      <ImageLink onInputChange={onInputChange}/>
+        <ImageLink />
       </div>
     );
+  }
 }
+
 export default App;

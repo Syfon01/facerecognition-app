@@ -27,9 +27,9 @@ const ParticleOptions = {
 };
 
 function App() {
-  const onInputChange = (e) => {
+  onInputChange = (e) => (
     console.log(e.target.value)
-  }
+  )
   return (
       <div className="App">
         <Particles className="particles" params={ParticleOptions} />

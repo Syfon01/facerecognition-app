@@ -26,18 +26,22 @@ const ParticleOptions = {
   }
 };
 
-function App() {
-  const onInputChange = (e) => {
-    console.log(e.target.value)
+class  App extend Component () {
+  constructor () {
+    super();
+    this.state {
+      input: ''
+    }
   }
   return (
-      <div className="App">
-        <Particles className="particles" params={ParticleOptions} />
-        <Navigation />
-        <Logo />
-        <Rank />
-      <ImageLink onInputChange={onInputChange}/>
-      </div>
-    );
+    <div className="App">
+      <Particles className="particles" params={ParticleOptions} />
+      <Navigation />
+      <Logo />
+      <Rank />
+      <ImageLink />
+    </div>
+  );
 }
+
 export default App;

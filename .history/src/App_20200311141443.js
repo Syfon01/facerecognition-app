@@ -27,17 +27,38 @@ const ParticleOptions = {
 };
 
 function App() {
-  const onInputChange = (e) => {
-    console.log(e.target.value)
-  }
+  const onInputChange = ()
   return (
       <div className="App">
         <Particles className="particles" params={ParticleOptions} />
         <Navigation />
         <Logo />
         <Rank />
-      <ImageLink onInputChange={onInputChange}/>
+        <ImageLink  />
       </div>
     );
 }
+// class App extends Component {
+//   constructor() {
+//     super();
+//     this.state = {
+//       input: ''
+//     }
+//   }
+//     onInputChange = (e) => {
+//       console.log(e.target.value)
+//     }
+  
+//   render() {
+//     return (
+//       <div className="App">
+//         <Particles className="particles" params={ParticleOptions} />
+//         <Navigation />
+//         <Logo />
+//         <Rank />
+//         <ImageLink onInputChange = {this.onInputChange} />
+//       </div>
+//     );
+//   }
+// }
 export default App;

@@ -26,18 +26,22 @@ const ParticleOptions = {
   }
 };
 
-function App() {
-  const onInputChange = (e) => {
-    console.log(e.target.value)
+function App(pr) {
+  const input = ''
+  
+  onInputChange = (e) => {
+    console.log(e)
   }
+  
   return (
-      <div className="App">
-        <Particles className="particles" params={ParticleOptions} />
-        <Navigation />
-        <Logo />
-        <Rank />
+    <div className="App">
+      <Particles className="particles" params={ParticleOptions} />
+      <Navigation />
+      <Logo />
+      <Rank />
       <ImageLink onInputChange={onInputChange}/>
-      </div>
-    );
+    </div>
+  );
 }
+
 export default App;
