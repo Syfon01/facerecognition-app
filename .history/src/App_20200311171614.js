@@ -34,19 +34,17 @@ const ParticleOptions = {
 };
 
 function App() {
-  const [input, setState] = useState('');
-  const [imageUrl, setUrlState] = useState('');
+  const [input, setState] = useState();
+  const [imageUrl, setUrlState] = useState();
 
   const onInputChange = (e) => {
-    setState(e.target.value);
+    setUrlState(e.target.value);
     // console.log(e.target.value)
   }
 
   const onSubmitButton = () => {
-    setUrlState( input );
-    console.log('click')
-    app.models
-      .predict(
+    setUrlState({ imageUrl:input });
+    app.models.predict(
       Clarifai.FACE_DETECT_MODEL,
       input)
       .then( function (response) {

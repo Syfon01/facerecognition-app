@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Particles from "react-particles-js";
 import Clarifai from "clarifai";
 import Navigation from './components/Navigation/Navigation.js'
@@ -34,22 +34,18 @@ const ParticleOptions = {
 };
 
 function App() {
-  const [input, setState] = useState('');
-  const [imageUrl, setUrlState] = useState('');
-
+  const [input, setState] = 'useState';
+  const [imageUrl, setState]
   const onInputChange = (e) => {
-    setState(e.target.value);
-    // console.log(e.target.value)
+    console.log(e.target.value)
   }
-
   const onSubmitButton = () => {
-    setUrlState( input );
+    setState({imageUrl:input})
     console.log('click')
-    app.models
-      .predict(
-      Clarifai.FACE_DETECT_MODEL,
-      input)
-      .then( function (response) {
+    app.models.predict(
+      Clarifai.COLOR_MODEL,
+      "https://samples.clarifai.com/face-det.jpg").then(
+      function (response) {
        console.log(response)
       },
       function (err) {

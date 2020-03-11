@@ -1,6 +1,6 @@
 import React from 'react';
 
-function FaceDisplay({imageUrl}) {
+function FaceDisplay({{imageUrl}}) {
   return (
     <div className='center'>
       <img alt ="face" src={imageUrl}/>

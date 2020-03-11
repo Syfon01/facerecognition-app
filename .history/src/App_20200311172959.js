@@ -35,15 +35,15 @@ const ParticleOptions = {
 
 function App() {
   const [input, setState] = useState('');
-  const [imageUrl, setUrlState] = useState('');
+  const [imageUrl, setUrlState] = useUState('');
 
   const onInputChange = (e) => {
-    setState(e.target.value);
+    setState(e.target.value');
     // console.log(e.target.value)
   }
 
   const onSubmitButton = () => {
-    setUrlState( input );
+    setUrlState({imageUrl: input });
     console.log('click')
     app.models
       .predict(
