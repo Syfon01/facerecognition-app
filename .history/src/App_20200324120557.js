@@ -52,11 +52,11 @@ function App() {
       leftCol: clariface.left_col * width,
       topRow: clariface.top_row * height,
       rightCol: width - (clariface.right_col * width),
-      bottomRow: height - (clariface.bottom_row * height)
+      bottomRow: height - (clariface.bottomRow * height)
     }
   }
 
-  const displayFaceBox = (box) => {
+  const displayBox = (box) => {
     console.log(box)
     setFaceState({box})
   }
@@ -67,7 +67,7 @@ function App() {
       .predict(
         Clarifai.FACE_DETECT_MODEL,
         input)
-      .then(response => displayFaceBox(calculateFaceLocation(response)))
+      .then(response => displayBox(calculateFaceLocation(response)))
       .catch(err => console.log(err));
   }
   return (
@@ -79,7 +79,7 @@ function App() {
       <ImageLink onInputChange={onInputChange}
                 onSubmitButton={onSubmitButton}
       />
-      <FaceDisplay box={box} imageUrl={imageUrl}/>
+      <FaceDisplay imageUrl={imageUrl}/>
       </div>
     );
 }

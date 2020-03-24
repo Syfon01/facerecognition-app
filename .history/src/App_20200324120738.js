@@ -52,7 +52,7 @@ function App() {
       leftCol: clariface.left_col * width,
       topRow: clariface.top_row * height,
       rightCol: width - (clariface.right_col * width),
-      bottomRow: height - (clariface.bottom_row * height)
+      bottomRow: height - (clariface.bottom_ * height)
     }
   }
 
@@ -79,7 +79,7 @@ function App() {
       <ImageLink onInputChange={onInputChange}
                 onSubmitButton={onSubmitButton}
       />
-      <FaceDisplay box={box} imageUrl={imageUrl}/>
+      <FaceDisplay imageUrl={imageUrl}/>
       </div>
     );
 }

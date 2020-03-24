@@ -36,39 +36,29 @@ const ParticleOptions = {
 function App() {
   const [input, setState] = useState('');
   const [imageUrl, setUrlState] = useState('');
-  const [box, setFaceState] = useState({});
+  const [FaceDisplay, setFaceState] = useState({});
 
   const onInputChange = (e) => {
     setState(e.target.value);
     // console.log(e.target.value)
   } 
 
-  const calculateFaceLocation = (data) => {
-    const clariface = data.outputs[0].data.regions[0].region_info.bounding_box;
-    const image = document.getElementById('imageFace');
-    const width = Number(image.width);
-    const height = Number(image.height);
-    return {
-      leftCol: clariface.left_col * width,
-      topRow: clariface.top_row * height,
-      rightCol: width - (clariface.right_col * width),
-      bottomRow: height - (clariface.bottom_row * height)
-    }
-  }
+  const calculateFaceLocation = 
 
-  const displayFaceBox = (box) => {
-    console.log(box)
-    setFaceState({box})
-  }
   const onSubmitButton = () => {
-    setUrlState(input);
+    setUrlState( input );
     console.log('click')
     app.models
       .predict(
-        Clarifai.FACE_DETECT_MODEL,
-        input)
-      .then(response => displayFaceBox(calculateFaceLocation(response)))
-      .catch(err => console.log(err));
+      Clarifai.FACE_DETECT_MODEL,
+      input)
+      .then( function (response) {
+       console.log(response.outputs[0].data.regions[0].region_info.bounding_box)
+      },
+      function (err) {
+        // there was an error
+      }
+    );
   }
   return (
       <div className="App">
@@ -79,7 +69,7 @@ function App() {
       <ImageLink onInputChange={onInputChange}
                 onSubmitButton={onSubmitButton}
       />
-      <FaceDisplay box={box} imageUrl={imageUrl}/>
+      <FaceDisplay imageUrl={imageUrl}/>
       </div>
     );
 }

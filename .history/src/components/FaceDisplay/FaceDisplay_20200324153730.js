@@ -6,7 +6,7 @@ function FaceDisplay({imageUrl}) {
     <div className='center ma'>
       <div className="absolute mt-5">
         <img alt="face" id="imageFace" src={imageUrl} width="200px" height="auto" />
-        <div className="bounding-box"></div>
+        .boun
       </div>
     </div>
   )
