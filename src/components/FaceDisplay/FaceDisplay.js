@@ -7,7 +7,6 @@ function FaceDisplay({ imageUrl, box }) {
     right: box.rightCol,
     bottom: box.bottomRow,
     left: box.leftCol
-
   }
   return (
     <div className='center ma'>
