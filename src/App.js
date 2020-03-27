@@ -6,6 +6,8 @@ import FaceDisplay from './components/FaceDisplay/FaceDisplay'
 import Logo from './components/Logo/Logo';
 import ImageLink from './components/ImageLink/ImageLink'
 import Rank from './components/Rank/Rank';
+import Login from './components/Login/Login';
+
 import './App.css';
 
 const app = new Clarifai.App({
@@ -62,8 +64,8 @@ function App() {
 
   
   const onSubmitButton = () => {
+    console.log(input)
     setUrlState(input);
-console.log(input)
     app.models
       .predict(
         Clarifai.FACE_DETECT_MODEL,
@@ -73,10 +75,11 @@ console.log(input)
       .catch(err => console.log(err));
   }
   return (
-      <div className="App">
+    <div className="App">
         <Particles className="particles" params={ParticleOptions} />
         <Navigation />
-        <Logo />
+          <Logo />
+        < Login />
         <Rank />
       <ImageLink onInputChange={onInputChange}
                 onSubmitButton={onSubmitButton}

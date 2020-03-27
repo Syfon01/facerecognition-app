@@ -4,7 +4,7 @@ import './ImageLink.css'
 function ImageLink ({onInputChange, onSubmitButton}) {
   return (
     <div>
-      <p className="f3">{'This Magic Brain will detect your face. Give it a try'}</p>
+      <p className="f3">{'This Magic Brain will detect your face. Give it a try by pasting your image url'}</p>
 
       <div className="center">
         <div className="form center pa4 shadow-5 br-3">
