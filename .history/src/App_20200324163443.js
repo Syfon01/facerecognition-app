@@ -38,9 +38,9 @@ function App() {
   const [imageUrl, setUrlState] = useState('');
   const [box, setFaceState] = useState({});
 
-  const displayFaceBox = (box) => {
+  const displayFaceBox = () => {
     console.log(box)
-    setFaceState(box)
+    setFaceState({box:box})
   }
   const onInputChange = (e) => {
     setState(e.target.value);
@@ -63,7 +63,7 @@ function App() {
   
   const onSubmitButton = () => {
     setUrlState(input);
-console.log(input)
+    console.log('click')
     app.models
       .predict(
         Clarifai.FACE_DETECT_MODEL,

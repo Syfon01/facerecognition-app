@@ -3,11 +3,8 @@ import './FaceDisplay.css'
 
 function FaceDisplay({ imageUrl, box }) {
   const boxStyle = {
-    top: box.topRow,
-    right: box.rightCol,
-    bottom: box.bottomRow,
-    left: box.leftCol
-
+     fontSize: '15px',
+       textAlign: 'center'
   }
   return (
     <div className='center ma'>

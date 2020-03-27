@@ -38,10 +38,6 @@ function App() {
   const [imageUrl, setUrlState] = useState('');
   const [box, setFaceState] = useState({});
 
-  const displayFaceBox = (box) => {
-    console.log(box)
-    setFaceState(box)
-  }
   const onInputChange = (e) => {
     setState(e.target.value);
     // console.log(e.target.value)
@@ -60,16 +56,18 @@ function App() {
     }
   }
 
-  
+  const displayFaceBox = (box) => {
+    console.log(box)
+    setFaceState(box)
+  }
   const onSubmitButton = () => {
     setUrlState(input);
-console.log(input)
+    console.log('click')
     app.models
       .predict(
         Clarifai.FACE_DETECT_MODEL,
         input)
       .then(response => displayFaceBox(calculateFaceLocation(response)))
-      
       .catch(err => console.log(err));
   }
   return (

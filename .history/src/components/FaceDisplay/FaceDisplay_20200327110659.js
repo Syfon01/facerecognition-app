@@ -9,6 +9,7 @@ function FaceDisplay({ imageUrl, box }) {
     left: box.leftCol
 
   }
+  console.log(box.typeof)
   return (
     <div className='center ma'>
       <div className="absolute mt-2">

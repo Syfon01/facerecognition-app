@@ -39,8 +39,8 @@ function App() {
   const [box, setFaceState] = useState({});
 
   const displayFaceBox = (box) => {
-    console.log(box)
-    setFaceState(box)
+    console.log(box.type)
+    setFaceState({box:box})
   }
   const onInputChange = (e) => {
     setState(e.target.value);

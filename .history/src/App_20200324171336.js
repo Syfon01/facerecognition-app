@@ -40,7 +40,7 @@ function App() {
 
   const displayFaceBox = (box) => {
     console.log(box)
-    setFaceState(box)
+    setFaceState({box:box})
   }
   const onInputChange = (e) => {
     setState(e.target.value);

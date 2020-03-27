@@ -36,11 +36,11 @@ const ParticleOptions = {
 function App() {
   const [input, setState] = useState('');
   const [imageUrl, setUrlState] = useState('');
-  const [box, setFaceState] = useState({});
+  const [box, setFaceState] = useState();
 
   const displayFaceBox = (box) => {
     console.log(box)
-    setFaceState(box)
+    setFaceState({box:box})
   }
   const onInputChange = (e) => {
     setState(e.target.value);
