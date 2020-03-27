@@ -7,6 +7,8 @@ import Logo from './components/Logo/Logo';
 import ImageLink from './components/ImageLink/ImageLink'
 import Rank from './components/Rank/Rank';
 import Login from './components/Login/Login';
+import Register from './components/Register/Register';
+
 
 import './App.css';
 
@@ -83,9 +85,8 @@ function App() {
     <div className="App">
         <Particles className="particles" params={ParticleOptions} />
         <Navigation onROuteChange={onRouteChange} />
-      { route === 'signin'
-        ? <Login onRouteChange={onRouteChange}/>
-        : <div>
+      { route === 'home'
+        ? <div>
             <Logo />
             <Rank />
             <ImageLink onInputChange={onInputChange}
@@ -93,6 +94,11 @@ function App() {
             />
             <FaceDisplay box={box} imageUrl={imageUrl} />
           </div>
+        :( route === 'signin'
+          ? <Login onRouteChange={onRouteChange} />
+          : <Register onRouteChange={onRouteChange} />
+          )
+
         }
       </div>
     );
